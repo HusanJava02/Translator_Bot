@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<metadata>
+  <groupId>uz.pdp</groupId>
+  <artifactId>YandexTranslator</artifactId>
+  <versioning>
+    <versions>
+      <version>1.0-SNAPSHOT</version>
+    </versions>
+    <lastUpdated>20210905180315</lastUpdated>
+  </versioning>
+</metadata>
