@@ -11,6 +11,7 @@ import org.telegram.telegrambots.meta.api.objects.replykeyboard.ReplyKeyboardRem
 import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 
 import java.io.IOException;
+import java.net.URISyntaxException;
 
 public class UpdateClass extends TelegramLongPollingBot {
     public static String fromLang="";
@@ -72,17 +73,11 @@ public class UpdateClass extends TelegramLongPollingBot {
                         sendMessage.setText("Rus "+text);
                         execute(sendMessage);
                     }else if (Botstate.equals("Input")) {
-                        System.out.println("ke");
+
                         Translator translator = new Translator();
-                        System.out.println(fromLang+" "+toLang);
-                        String textTranslated = message.getText()+"";
-                        StringBuilder stringBuilder = new StringBuilder();
-                        if (!toLang.equalsIgnoreCase("uz")){
 
-                            stringBuilder.append('`').append(textTranslated).append('`');
-                        }else stringBuilder.append(textTranslated);
-
-                        String responseString = translator.translate(fromLang, toLang, stringBuilder.toString());
+                        String textTranslated = message.getText();
+                        String responseString = translator.translate(fromLang, toLang, textTranslated);
                         SendMessage translated = TextMessageHandler.sendResponse(responseString, update);
                         execute(translated);
 
@@ -90,6 +85,8 @@ public class UpdateClass extends TelegramLongPollingBot {
                 }
 
             } catch (TelegramApiException | IOException e) {
+                e.printStackTrace();
+            }catch (URISyntaxException e) {
                 e.printStackTrace();
             }
 
