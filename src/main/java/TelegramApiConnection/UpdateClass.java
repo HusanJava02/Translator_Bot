@@ -1,6 +1,6 @@
 package TelegramApiConnection;
 
-import ConnectToYandex.Translator;
+import ConnectToApi.Translator;
 import MessageHandler.TextMessageHandler;
 import org.telegram.telegrambots.bots.TelegramLongPollingBot;
 import org.telegram.telegrambots.meta.api.methods.send.SendMessage;

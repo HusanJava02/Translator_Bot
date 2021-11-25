@@ -1,7 +1,5 @@
-package ConnectToYandex;
+package ConnectToApi;
 
-
-import org.apache.http.client.utils.URIBuilder;
 
 import java.io.BufferedReader;
 import java.io.IOException;
@@ -10,7 +8,6 @@ import java.net.HttpURLConnection;
 import java.net.URISyntaxException;
 import java.net.URL;
 import java.net.URLEncoder;
-import java.util.Scanner;
 
 public class Translator {
     public  String translate(String langFrom,String langTo,String text) throws IOException, URISyntaxException {
