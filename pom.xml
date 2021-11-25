@@ -64,7 +64,7 @@
                     <assembleDirectory>target</assembleDirectory>
                     <programs>
                         <program>
-                            <mainClass>TelegramApiConnection.Initializations</mainClass>
+                            <mainClass>TelegramApiConnection.Initialization</mainClass>
                             <name>YandexTranslator</name>
                         </program>
                     </programs>

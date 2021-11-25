@@ -20,7 +20,7 @@ public class Translator {
         return translateGoogle(urlStr,langFrom,langTo,text);
     }
     private  String translateGoogle(String urls,String langFrom, String langTo, String text) throws IOException, URISyntaxException {
-        // INSERT YOU URL HERE
+
         String urlStr = urls +
                 "?q=" + URLEncoder.encode(text, "UTF-8") +
                 "&target=" + langTo +
